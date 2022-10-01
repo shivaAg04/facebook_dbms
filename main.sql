@@ -69,5 +69,5 @@ create table messages(
     message_receiver varchar(20),
     foreign key (message_sender) references user_profile(username),
     foreign key (message_receiver) references user_profile(username),
-    primary key (message_senfer, message_receiver)
+    primary key (message_sender, message_receiver)
 );
