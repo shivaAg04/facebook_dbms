@@ -64,3 +64,10 @@ create table user_post_comment(
     video_url varchar(30),
     primary key (post_id,video_url)
 );
+create table messages(
+	message_sender varchar(20),
+    message_receiver varchar(20),
+    foreign key (message_sender) references user_profile(username),
+    foreign key (message_receiver) references user_profile(username),
+    primary key (message_senfer, message_receiver)
+);
